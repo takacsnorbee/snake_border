@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(249, 213, 122, 0.3);
+    height: 100vh;
+    width: 100vw;
+}
+
+ul {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin: 10px 10px;
+}
+
+a {
+    position: relative;
+    display: flex;
+    text-decoration: none;
+    font-size: 4rem;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    transition: 0.5s;
+}
+
+span {
+    position: absolute;
+    transition: transform 0.5s;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+}
+
+span:nth-child(1) {
+    top: 0;
+    left: 0;
+    transform-origin: left;
+}
+
+span:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    transform-origin: right;
+}
+
+span:nth-child(2) {
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 1px;
+    transform: scale(0);
+    transform-origin: top;
+}
+
+span:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 1px;
+    transform: scale(0);
+    transform-origin: bottom;
+}
+
+a:hover span:nth-child(1) {
+    transform: scale(0);
+    transform-origin: left;
+}
+
+a:hover span:nth-child(2) {
+    transform: scale(1);
+    transform-origin: top;
+}
+
+a:hover span:nth-child(3) {
+    transform: scale(0);
+    transform-origin: right;
+}
+
+a:hover span:nth-child(4) {
+    transform: scale(1);
+    transform-origin: bottom;
+}
+
+
+
